@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- mycss -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>abayMovie</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h2 class="navbar-brand">abayMoviesInfo</h2>
+      </div>
+    </nav>
+    
+    <div class="container mt-4">
+      <h1 class="text-center">Search Movie</h1>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="e.g: Star Wars" id="input-movie">
+        <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button>
+      </div>
+    
+      <hr>
+
+      <div class="row mx-auto" id="movie-list">
+        <!-- <div class="md-4 mx-auto my-1">
+          <div class="card" style="width: 18rem">
+              <img src="img/pizza/american-favourite.jpg" class="card-img-top"/>
+              <div class="card-body">
+                  <h5 class="card-title">American Favourite</h5>
+                  <p class="card-text">
+                      Some quick example text to build on the card title and make up
+                      the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Pesan sekarang</a>
+              </div>
+          </div>
+      </div> -->
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body row">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="jokes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">:)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body row">
+            Go subscribe some Netlifx lmao
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understandable</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start footer">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-dark" href="http://akbarangkasa.com/" target="blank">akbarangkasa.com</a>
+        <p>demo version 0.3</p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+  </body>
+
+  <!-- JQUERY CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- firebase -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDmwKfnNJ2Cp1zrGwzUzNnZaeJrWbI47kQ",
+      authDomain: "testapiomdb.firebaseapp.com",
+      projectId: "testapiomdb",
+      storageBucket: "testapiomdb.appspot.com",
+      messagingSenderId: "982148698720",
+      appId: "1:982148698720:web:d655769d2d96fb79bb2905",
+      measurementId: "G-TX3JNMM3K6"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</html>
