@@ -21,7 +21,7 @@ function searchMovie(){
                             <div class="card-body">
                                 <h5 class="card-title">`+element.Title+`</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">`+element.Year+`</h6>
-                                <a href="#" class="detail-movie" type="button" data-bs-toggle="modal" data-bs-target="#jokes">Watch Now</a>
+                                <a href="#" class="detail-movie" type="button" data-bs-toggle="modal" data-bs-target="#jokes">Watch now</a>                               
                                 <a href="#" class="detail-movie" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="`+element.imdbID+`">See detail</a>
                             </div>
                         </div>
