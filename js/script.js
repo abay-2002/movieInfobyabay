@@ -50,7 +50,7 @@ $('#input-movie').on('keyup', function(event){
 
 
 $('#movie-list').on('click', '.detail-movie', function(){
-    console.log($(this).data('id'));
+    // console.log($(this).data('id'));
     // sampai sini saja tidak tampil pada console, kenapa? karena ada problem yang dinamakan event bubbling.
     // kenapa karena event ini dibuat sebelum class detail-movie dibuat, solusinya adalah menggunakan event delegation yaitu memilih element parentnya yang kemudian apabila ada class detail-movie maka lakukan function.
     $.ajax({
@@ -63,7 +63,7 @@ $('#movie-list').on('click', '.detail-movie', function(){
         },
         success: function(result){
             if(result.Response == "True"){
-                $('.modal-body').html(`    
+                $('.appended-json').html(`    
                     <div class="col">Actors: `+result.Actors+`</div>
                     <div class="col">Writer: `+result.Writer+`</div>
                     <div class="row">
