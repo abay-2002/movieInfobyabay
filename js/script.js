@@ -2,7 +2,7 @@ function searchMovie(){
     $('#movie-list').html('');
 
     $.ajax({
-        url: 'http://www.omdbapi.com',
+        url: 'https://www.omdbapi.com',
         type: 'get',
         dataType: 'json',
         data: {
@@ -54,7 +54,7 @@ $('#movie-list').on('click', '.detail-movie', function(){
     // sampai sini saja tidak tampil pada console, kenapa? karena ada problem yang dinamakan event bubbling.
     // kenapa karena event ini dibuat sebelum class detail-movie dibuat, solusinya adalah menggunakan event delegation yaitu memilih element parentnya yang kemudian apabila ada class detail-movie maka lakukan function.
     $.ajax({
-        url: 'http://www.omdbapi.com',
+        url: 'https://www.omdbapi.com',
         type: 'get',
         typeData: 'json',
         data: {
