@@ -13,6 +13,7 @@ function searchMovie(){
             // console.log(result);
             if(result.Response == "True"){
                 let movies = result.Search;
+                console.log(result);
                 $.each(movies, function(i, element){
                     $('#movie-list').append(`
                     <div class="col-md-2 mx-auto my-1">
@@ -37,6 +38,9 @@ function searchMovie(){
     })//penutup ajax
 }
 
+
+
+
 $('#search-button').on('click',function(){
     searchMovie();
 });
@@ -46,6 +50,9 @@ $('#input-movie').on('keyup', function(event){
         searchMovie();
     }
 });
+
+
+
 
 
 
@@ -74,5 +81,4 @@ $('#movie-list').on('click', '.detail-movie', function(){
             }
         }
     })
-    
 });
